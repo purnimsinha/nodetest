@@ -26,7 +26,7 @@ jobs:
       - name: Deploy to VPS via SSH
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
-            cd /root/SATGURUSTC/EZCart-Backend
+            cd /root/nodetest/nodetest
             git pull
           EOF
       - name: Send ntfy Notification
